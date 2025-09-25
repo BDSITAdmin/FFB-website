@@ -1,90 +1,118 @@
 import React from "react";
+import seedIcon from '../assets/seed.png';
+import bioIcon from '../assets/bio.png';
+import researchIcon from '../assets/research.png';
+import healthIcon from '../assets/health.png';
 
-const ProductsServices = () => {
+
+const services = [
+    {
+        icon: seedIcon, // Your seed/farming icon
+        title: "Seed Innovation & Sustainable Farming",
+        features: [
+            "Precision phenotyping",
+            "Yield optimization",
+            "Next-gen precision agriculture"
+        ]
+    },
+    {
+        icon: bioIcon, // Your molecule/bioactives icon
+        title: "Functional Bioactives",
+        features: [
+            "Botanicals",
+            "Dietary supplements",
+            "Nutraceuticals"
+        ]
+    },
+    {
+        icon: researchIcon, // Your research/lab icon
+        title: "Advanced Contract Research",
+        features: [
+            "Formulation",
+            "Preclinical Studies",
+            "Clinical trial management",
+            "Regulatory support"
+        ]
+    },
+    {
+        icon: healthIcon, // Your health/supplements icon
+        title: "Health Supplements",
+        features: [
+            "Eye health",
+            "Respiratory wellness",
+            "Liver wellness",
+            "Metabolic health",
+            "Prostate health",
+            "Men's health",
+            "Women's wellness",
+            "Healthy aging"
+
+
+        ]
+    }
+];
+
+export default function ProductsServices() {
     return (
-        <section className="py-12 px-6 bg-white">
-            <div className="max-w-7xl mx-auto text-center">
-                {/* Section Title */}
-                <h2 className="text-2xl font-semibold text-green-900 mb-8">
-                    Products & Services
-                </h2>
+        <section className="w-full bg-white py-16">
+            <div className="mx-auto max-w-7xl px-6">
 
-                {/* Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {/* Card 1 */}
-                    <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-left shadow-sm hover:shadow-md transition">
-                        <div className="flex items-center gap-2 mb-4">
-                            <img src="/icons/seed.svg" alt="Seed Icon" className="w-6 h-6" />
-                            <h3 className="font-semibold text-green-900">
-                                Seed Innovation & Sustainable Farming
-                            </h3>
-                        </div>
-                        <ul className="text-sm text-gray-700 list-disc list-inside space-y-1">
-                            <li>Precision phenotyping</li>
-                            <li>Yield optimization trials</li>
-                            <li>Next-gen precision agriculture</li>
-                        </ul>
-                    </div>
-
-                    {/* Card 2 */}
-                    <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-left shadow-sm hover:shadow-md transition">
-                        <div className="flex items-center gap-2 mb-4">
-                            <img src="/icons/bio.svg" alt="Bio Icon" className="w-6 h-6" />
-                            <h3 className="font-semibold text-green-900">
-                                Functional Bioactives
-                            </h3>
-                        </div>
-                        <ul className="text-sm text-gray-700 list-disc list-inside space-y-1">
-                            <li>Fortified food</li>
-                            <li>Beverages</li>
-                            <li>Dietary supplements</li>
-                        </ul>
-                    </div>
-
-                    {/* Card 3 */}
-                    <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-left shadow-sm hover:shadow-md transition">
-                        <div className="flex items-center gap-2 mb-4">
-                            <img src="/icons/research.svg" alt="Research Icon" className="w-6 h-6" />
-                            <h3 className="font-semibold text-green-900">
-                                Advanced Contract Research
-                            </h3>
-                        </div>
-                        <ul className="text-sm text-gray-700 list-disc list-inside space-y-1">
-                            <li>Formulation</li>
-                            <li>Preclinical Studies</li>
-                            <li>Clinical trial management</li>
-                            <li>Regulatory filings</li>
-                        </ul>
-                    </div>
-
-                    {/* Card 4 */}
-                    <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-left shadow-sm hover:shadow-md transition">
-                        <div className="flex items-center gap-2 mb-4">
-                            <img src="/icons/health.svg" alt="Health Icon" className="w-6 h-6" />
-                            <h3 className="font-semibold text-green-900">Health Supplements</h3>
-                        </div>
-                        <ul className="text-sm text-gray-700 list-disc list-inside space-y-1">
-                            <li>Eye Health</li>
-                            <li>Respiratory wellness</li>
-                            <li>Liver wellness</li>
-                            <li>Metabolic health</li>
-                            <li>Prostate health</li>
-                            <li>Men's health</li>
-                            <li>Women’s wellness</li>
-                            <li>Healthy aging</li>
-                        </ul>
-                    </div>
+                {/* Header */}
+                <div className="mb-12">
+                    <h2 className="text-[48px] leading-[52px] tracking-[-0.01em] mb-8 text-[#003B1B]">
+                        Products & Services
+                    </h2>
                 </div>
 
-                {/* Button */}
-                <div className="mt-10">
-                    <button className="bg-green-800 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">
+                {/* Services Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    {services.map((service, index) => (
+                        <div
+                            key={index}
+                            className="bg-[#DCF1E5] rounded-2xl p-6 
+                shadow-none 
+                hover:shadow-[0_4px_6px_#00600E33] 
+                transition-shadow duration-300
+                hover:border hover:border-[#003B1B]"
+                        >
+                            {/* PNG Icon */}
+                            <div className="w-12 h-12  rounded-xl flex items-center justify-center">
+                                <img
+                                    src={service.icon}
+                                    alt={`${service.title} icon`}
+                                    className="w-[48px] h-[46px] object-contain "
+
+                                />
+                            </div>
+
+                            {/* Title */}
+                            <h3 className="font-[DM_Serif_Display] font-normal not-italic text-[32px] leading-[42px] tracking-[-0.01em]  text-[#003B1B]">
+                                {service.title}
+                            </h3>
+
+                            {/* Features List */}
+                            <ul className="space-y-2 mt-2">
+                                {service.features.map((feature, featureIndex) => (
+                                    <li
+                                        key={featureIndex}
+                                        className="font-[Figtree] font-normal  text-[18px] leading-[24px] tracking-[0em] flex items-start text-[#6F6F6F]"
+                                    >
+                                        <span className="text-[#6F6F6F] mr-2 mt-1 text-xs">•</span>
+                                        {feature}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+
+                {/* View All Button */}
+                <div className="flex justify-center">
+                    <button className="bg-[#00622D] text-white w-[317px] h-[48px] px-6 py-[14px] gap-[10px] rounded-full font-[Figtree] font-semibold not-italic text-[20px] leading-[20px] tracking-[0.02em]">
                         View all Products & Services
                     </button>
                 </div>
             </div>
         </section>
     );
-};
-
-export default ProductsServices;
+}

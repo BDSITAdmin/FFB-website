@@ -1,75 +1,85 @@
 import React from "react";
+import foterlogo from '../assets/footer-logo.png';
+import linkedin from '../assets/linkedin.png';
+import instagram from '../assets/instagram.png';
+
 
 const Footer = () => {
     return (
-        <footer className="bg-green-950 text-white py-8 px-6 w-full">
+        <footer className="bg-[#003B1B] text-white py-8 px-6 w-full">
             <div className="max-w-7xl mx-auto">
-                {/* Top Section */}
+
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8">
 
-                    {/* Company Info */}
-                    <div className="w-full lg:w-1/3">
+
+                    <div className="w-full lg:w-1/3 mt-4">
                         <img
-                            src="/logo.png" // replace with your logo file
+                            src={foterlogo}
                             alt="FF Bioworks"
-                            className="w-36 mb-4"
+                            className="w-[168px] h-[41.86px] mb-4"
                         />
-                        <p className="text-sm leading-relaxed">
+                        <p className="font-[Figtree] font-normal text-[16px] leading-[24px] tracking-[-0.01em]">
                             FF Bioworks India Pvt Ltd. <br />
-                            23, 17th Main, H.A.L 2nd Stage, <br />
-                            Bengaluru, Karnataka, India
+                            23, 17th Main, H.A.L 2nd Stage, Bengaluru <br />
+                            Karnataka, India
                         </p>
-                        <p className="mt-3 text-sm">
+                        <p className="mt-3 font-[Figtree] font-normal text-[16px] leading-[24px] tracking-[-0.01em]">
                             Email:{" "}
                             <a
                                 href="mailto:info@ffbioworks.com"
-                                className="underline hover:text-green-300"
+
                             >
                                 info@ffbioworks.com
                             </a>
                         </p>
-                        <p className="text-sm">Contact Number: +91-80-49404943</p>
+                        <p className="mt-1 font-[Figtree] font-normal text-[16px] leading-[24px] tracking-[-0.01em]">Contact Number: +91-80-41494049</p>
 
-                        {/* Social Icons */}
-                        <div className="flex gap-3 mt-4">
+
+                        <div className="flex gap-[16px] mt-4">
                             <a href="#" className="hover:opacity-80">
-                                <img src="/linkedin.svg" alt="LinkedIn" className="w-8 h-8" />
+                                <img src={linkedin} alt="LinkedIn" className="w-[44px] h-[44px" />
                             </a>
                             <a href="#" className="hover:opacity-80">
-                                <img src="/instagram.svg" alt="Instagram" className="w-8 h-8" />
+                                <img src={instagram} alt="Instagram" className="w-[44px] h-[44px" />
                             </a>
                         </div>
                     </div>
 
-                    {/* Services + Navigation */}
-                    <div className="w-full lg:w-2/3 text-sm flex flex-col gap-4">
-                        {/* Services Row */}
-                        <div className="flex flex-wrap gap-x-4 gap-y-2 border-b border-gray-700 pb-3">
+
+                    <div className="w-full lg:w-2/3 text-sm flex flex-col gap-4 mt-24">
+
+                        <div className="flex flex-wrap items-center gap-4  pb-3 font-[Figtree] font-medium not-italic text-[14px] leading-[20px] tracking-[0.02em] text-[#C6FCCE]">
                             <span className="whitespace-nowrap">Seed Production, Testing & Trait Optimization</span>
-                            <span className="hidden sm:inline">|</span>
+
+                            <div className="hidden sm:block h-6 border-1 border-[#C6FCCE]"></div>
                             <span className="whitespace-nowrap">Contract Farming</span>
-                            <span className="hidden sm:inline">|</span>
+
+                            <div className="hidden sm:block h-6 border-1 border-[#C6FCCE]"></div>
                             <span className="whitespace-nowrap">Innovative Formulations</span>
-                            <span className="hidden sm:inline">|</span>
+
+                            <div className="hidden sm:block h-6 border-1 border-[#C6FCCE]"></div>
                             <span className="whitespace-nowrap">Contract Research</span>
                         </div>
+                        <div className="flex flex-wrap items-center gap-6 mt-2  font-[Figtree] font-medium not-italic text-[20px] leading-[20px] tracking-[0.02em] text-[#C6FCCE] ">
+                            <div className="hidden sm:block h-6 "></div>
+                            <span className="whitespace-nowrap">About Us</span>
 
-                        {/* Navigation Links */}
-                        <div className="flex flex-wrap gap-6 mt-2">
-                            <a href="#" className="hover:underline">About Us</a>
-                            <a href="#" className="hover:underline">Products and Services</a>
-                            <a href="#" className="hover:underline">Innovation & Impact</a>
-                            <a href="#" className="hover:underline">Resources</a>
+                            <div className="hidden sm:block h-6 border-1 border-[#C6FCCE]"></div>
+                            <span className="whitespace-nowrap">Products and Services</span>
+
+                            <div className="hidden sm:block h-6 border-1 border-[#C6FCCE]"></div>
+                            <span className="whitespace-nowrap">Innovation & Impact</span>
+                            <div className="hidden sm:block h-6 border-1 border-[#C6FCCE]"></div>
+                            <span className="whitespace-nowrap">Resources</span>
                         </div>
                     </div>
                 </div>
 
-                {/* Bottom small text for mobile */}
                 <div className="text-xs text-center mt-6 text-gray-400">
                     © {new Date().getFullYear()} FF Bioworks India Pvt Ltd. All rights reserved.
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 };
 

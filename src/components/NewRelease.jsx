@@ -1,49 +1,44 @@
 import React from "react";
-
+import arrow from '../assets/arrow-right.png';
 const NewReleaseCard = () => {
     return (
-        <section className="px-4 sm:px-6 lg:px-8 py-10">
-            <div className="max-w-6xl mx-auto">
-                {/* Orange panel */}
-                <div className="relative rounded-2xl bg-[#F59E0B] text-white p-6 sm:p-8 md:p-10 overflow-hidden">
-                    {/* Corner radius accent to mimic screenshot’s pill ends */}
-                    <div className="absolute right-0 bottom-0 w-32 h-10 bg-white/0 rounded-tl-2xl pointer-events-none" />
+        <section className="px-0 sm:px-0 lg:px-0 py-12 lg:py-16">
+            <div className="w-full"> {/* full width container */}
 
-                    {/* Content grid */}
+                <div className="relative bg-[#FF9100]  pt-16 pr-[200px] pb-16 pl-16 gap-2.5 rotate-0 opacity-100 rounded-tr-[24px] rounded-br-[24px] overflow-hidden">
+
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
-                        {/* Left copy */}
+
                         <div className="md:col-span-3">
-                            <p className="uppercase tracking-wide text-xs md:text-[11px] font-medium opacity-90">
+                            <p className=" text-[#FFFFFF] font-figtree font-semibold not-italic text-[16px] leading-[16px] tracking-[0.03em] uppercase">
                                 New Release
                             </p>
-                            <h3 className="mt-2 text-2xl sm:text-3xl font-semibold leading-snug">
+                            <h1 className="mt-3 text[#181818]  text-[48px] leading-[56px] tracking-[-0.01em] font-normal">
                                 A promising nature
                                 <br className="hidden sm:block" />
                                 centric solution!
-                            </h3>
-                            <p className="mt-4 text-white/90 text-sm leading-6">
+                            </h1>
+                            <p className="mt-4 text[#181818] font-normal not-italic text-[20px] leading-[28px] tracking-[0em] pr-12">
                                 Powered by our patented blend of Curcuminoids +
-                                Xanthophylls, iXAN is a clinically validated innovation
-                                for vision, cognition, liver wellness, skin health &
-                                overall wellness. From seed science to bioactive
-                                precision, iXAN represents the mission of creating
-                                plant‑based solutions with measurable impact.
+                                Xanthophylls, <span className="font-extrabold">iXAN </span>is a clinically validated innovation
+                                for vision, cognition, liver wellness, skin health & overall wellness.
+                                From seed science to bioactive precision,<span className="font-extrabold">iXAN </span> represents the mission
+                                of creating plant‑based solutions with measurable impact.
                             </p>
 
                             <a
                                 href="#learn-more"
-                                className="mt-5 inline-flex items-center gap-2 text-white text-sm font-medium underline underline-offset-4 decoration-white/60 hover:decoration-white transition"
+                                className="mt-6 inline-flex items-center gap-2 font-semibold not-italic text-[20px] leading-[20px] tracking-[2%] lowercase text-[#003B1B]"
                             >
                                 know more
-                                <span aria-hidden>→</span>
+                                <img src={arrow} alt="arrow" className="w-[16px] h-[16px] mt-2 " />
                             </a>
                         </div>
 
-                        {/* Right floating badge */}
                         <div className="md:col-span-2">
                             <div className="md:-mr-8 md:translate-x-4 md:-translate-y-2">
                                 <div className="bg-white text-gray-900 rounded-xl shadow-sm ring-1 ring-black/10 p-5 sm:p-6">
-                                    {/* Replace with logo/image */}
+
                                     <div className="flex items-center gap-3">
                                         <div className="w-10 h-10 rounded-full bg-amber-400 grid place-items-center text-white font-bold">
                                             i
@@ -60,8 +55,7 @@ const NewReleaseCard = () => {
                                     </div>
 
                                     <p className="mt-3 text-[11px] text-gray-600">
-                                        Patented Synergistic Anti‑Oxidant & Anti‑Inflammatory
-                                        Composition
+                                        Patented Synergistic Anti‑Oxidant & Anti‑Inflammatory Composition
                                     </p>
 
                                     <hr className="my-3 border-gray-200" />
@@ -77,12 +71,12 @@ const NewReleaseCard = () => {
                         </div>
                     </div>
 
-                    {/* Rounded cutouts to match screenshot corners */}
                     <div className="pointer-events-none absolute top-0 right-0 w-8 h-8 bg-white rounded-bl-2xl md:hidden" />
                     <div className="pointer-events-none absolute bottom-0 left-0 w-8 h-8 bg-white rounded-tr-2xl md:hidden" />
                 </div>
             </div>
         </section>
+
     );
 };
 

@@ -20,7 +20,7 @@ const Footer = () => {
                         />
                         <p className="font-[Figtree] font-normal text-[16px] leading-[24px] tracking-[-0.01em]">
                             FF Bioworks India Pvt Ltd. <br />
-                            23, 17th Main, H.A.L 2nd Stage, Bengaluru <br />
+                            23, 17th Main, HAL 2nd Stage, Bengaluru, <br />
                             Karnataka, India
                         </p>
                         <p className="mt-3 font-[Figtree] font-normal text-[16px] leading-[24px] tracking-[-0.01em]">
@@ -75,9 +75,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="text-xs text-center mt-6 text-gray-400">
-                    © {new Date().getFullYear()} FF Bioworks India Pvt Ltd. All rights reserved.
-                </div>
+
             </div>
         </footer >
     );

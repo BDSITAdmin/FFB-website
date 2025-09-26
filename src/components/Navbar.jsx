@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import Logo from '../assets/logo.png';
 
 const Navbar = () => {
@@ -10,42 +10,114 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="bg-green-950 text-white sticky top-0 z-50">
+    <nav className="bg-[#003B1B] text-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
+        <div className="flex justify-between items-center h-28">
+
+
+          <a href="/" className="flex items-center">
             <img src={Logo} alt="FF Bioworks" className="w-[168px] h-[41px]" />
-            {/* <span className="font-bold text-lg">FF BIOWORKS</span> */}
           </a>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
-            {/* Same page scroll */}
-            <a href="#about" className="hover:text-green-300">
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#about" className="hover:text-green-300 font-medium text-[18px] transition duration-200">
               About Us
             </a>
 
-            {/* Dropdown */}
+
             <div
-              className="relative group"
+              className="relative"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <button className="flex items-center gap-1 hover:text-green-300">
-                Business Verticals <FaChevronDown className="w-3 h-3" />
+              <button className="flex items-center space-x-1 hover:text-green-300 font-medium text-[18px] transition duration-200">
+                Business Verticals <FaChevronDown className="w-4 h-4 mt-1 text-2xl ml-2 " />
               </button>
-              {dropdownOpen && (
-                <div className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg rounded-md z-50">
+
+              {/* {dropdownOpen && (
+                <div className="absolute left-0 top-full mt-2 w-56 bg-white text-black shadow-lg rounded-md z-50 border border-gray-200">
                   <a
                     href="#seed"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-3 hover:bg-gray-50 border-b border-gray-100 transition duration-200"
                   >
                     Seed Production
                   </a>
                   <a
                     href="#farming"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-3 hover:bg-gray-50 transition duration-200"
+                  >
+                    Contract Farming
+                  </a>
+                </div>
+              )} */}
+            </div>
+
+
+            <Link to="/products" className="hover:text-green-300 font-medium text-[18px] transition duration-200">
+              Products & Services
+            </Link>
+            <Link to="/innovation" className="hover:text-green-300 font-medium text-[18px] transition duration-200">
+              Innovation & Impact
+            </Link>
+            <Link to="/resources" className="hover:text-green-300 font-medium text-[18px] transition duration-200">
+              Resources
+            </Link>
+
+
+            <Link
+              to="/contact"
+              className="border-2 border-white px-6 py-2 rounded-full hover:bg-white hover:text-green-900 transition duration-200 font-medium text-[18px]"
+            >
+              Contact Us
+            </Link>
+          </div>
+
+
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-md hover:bg-green-900 transition duration-200"
+            >
+              {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      {isOpen && (
+        <div className="md:hidden bg-green-900 border-t border-green-800 ">
+          <div className="px-4 pt-2 pb-4 space-y-1">
+            <a
+              href="#about"
+              className="block py-3 px-4 rounded-md hover:bg-green-800 transition duration-200 border-b border-green-700"
+              onClick={() => setIsOpen(false)}
+            >
+              About Us
+            </a>
+
+            {/* Mobile Dropdown */}
+            <div className="border-b border-green-700">
+              <button
+                className="w-full text-left py-3 px-4 rounded-md flex justify-between items-center hover:bg-green-800 transition duration-200"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                Business Verticals <FaChevronDown className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {dropdownOpen && (
+                <div className="pl-6 pb-2 space-y-1">
+                  <a
+                    href="#seed"
+                    className="block py-2 px-4 rounded-md hover:bg-green-800 transition duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Seed Production
+                  </a>
+                  <a
+                    href="#farming"
+                    className="block py-2 px-4 rounded-md hover:bg-green-800 transition duration-200"
+                    onClick={() => setIsOpen(false)}
                   >
                     Contract Farming
                   </a>
@@ -53,101 +125,41 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Other page navigation */}
-            <Link to="/products" className="hover:text-green-300">
+            <Link
+              to="/products"
+              className="block py-3 px-4 rounded-md hover:bg-green-800 transition duration-200 border-b border-green-700"
+              onClick={() => setIsOpen(false)}
+            >
               Products & Services
             </Link>
-            <Link to="/innovation" className="hover:text-green-300">
+
+            <Link
+              to="/innovation"
+              className="block py-3 px-4 rounded-md hover:bg-green-800 transition duration-200 border-b border-green-700"
+              onClick={() => setIsOpen(false)}
+            >
               Innovation & Impact
             </Link>
-            <Link to="/resources" className="hover:text-green-300">
+
+            <Link
+              to="/resources"
+              className="block py-3 px-4 rounded-md hover:bg-green-800 transition duration-200 border-b border-green-700"
+              onClick={() => setIsOpen(false)}
+            >
               Resources
             </Link>
 
-            {/* Contact Button */}
-            <Link
-              to="/contact"
-              className="border border-white px-4 py-1 rounded-full hover:bg-white hover:text-green-900 transition"
-            >
-              Contact Us
-            </Link>
-          </div>
 
-          {/* Mobile Hamburger */}
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-green-950 px-4 pb-4">
-          <a
-            href="#about"
-            className="block py-2 border-b border-gray-700"
-            onClick={() => setIsOpen(false)}
-          >
-            About Us
-          </a>
-
-          {/* Dropdown inside mobile */}
-          <button
-            className="w-full text-left py-2 flex justify-between items-center border-b border-gray-700"
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
-            Business Verticals <FaChevronDown />
-          </button>
-          {dropdownOpen && (
-            <div className="pl-4">
-              <a
-                href="#seed"
-                className="block py-2"
+            <div className="pt-2">
+              <Link
+                to="/contact"
+                className="block text-center border-2 border-white px-6 py-3 rounded-full hover:bg-white hover:text-green-900 transition duration-200 font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                Seed Production
-              </a>
-              <a
-                href="#farming"
-                className="block py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                Contract Farming
-              </a>
+                Contact Us
+              </Link>
             </div>
-          )}
-
-          <Link
-            to="/products"
-            className="block py-2 border-b border-gray-700"
-            onClick={() => setIsOpen(false)}
-          >
-            Products & Services
-          </Link>
-          <Link
-            to="/innovation"
-            className="block py-2 border-b border-gray-700"
-            onClick={() => setIsOpen(false)}
-          >
-            Innovation & Impact
-          </Link>
-          <Link
-            to="/resources"
-            className="block py-2 border-b border-gray-700"
-            onClick={() => setIsOpen(false)}
-          >
-            Resources
-          </Link>
-
-          <Link
-            to="/contact"
-            className="block text-center mt-3 border border-white px-4 py-2 rounded-full hover:bg-white hover:text-green-900 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact Us
-          </Link>
+          </div>
         </div>
       )}
     </nav>

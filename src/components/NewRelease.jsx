@@ -1,82 +1,76 @@
 import React from "react";
-import arrow from '../assets/arrow-right.png';
+import { GoArrowRight } from "react-icons/go";
+import ixanImg from "../assets/ixanLogo.png";
+
 const NewReleaseCard = () => {
     return (
-        <section className="px-0 sm:px-0 lg:px-0 py-12 lg:py-16">
-            <div className="w-full"> {/* full width container */}
+        <section className="relative overflow-hidden py-12 mt-16  ">
 
-                <div className="relative bg-[#FF9100]  pt-16 pr-[200px] pb-16 pl-16 gap-2.5 rotate-0 opacity-100 rounded-tr-[24px] rounded-br-[24px] overflow-hidden">
+            <div
+                className="absolute left-0 top-0 bottom-0 bg-[#FF9100] rounded-tr-[24px] rounded-br-[24px]
+                   w-[90vw] md:w-[90vw] lg:w-[75%]"
+                aria-hidden="true"
+            />
+            <div className="relative max-w-6xl mx-auto px-6 md:px-12  ">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center py-8">
+                    <div className="md:col-span-3 z-20">
+                        <p className="text-[#C6FCCE] font-figtree font-semibold text-[16px] tracking-wide uppercase">
+                            New Release
+                        </p>
+                        <h1 className="mt-3 text-[#181818] text-3xl sm:text-4xl lg:text-5xl leading-tight font-normal">
+                            A promising nature
+                            <br className="hidden sm:block" />
+                            centric solution!
+                        </h1>
+                        <p className="mt-4 text-[#181818] text-base sm:text-lg lg:text-xl leading-relaxed md:pr-34">
+                            Powered by our patented blend of Curcuminoids + Xanthophylls,{" "}
+                            <span className="font-extrabold">iXAN </span>is a clinically
+                            validated innovation for vision, cognition, liver wellness, skin
+                            health & overall wellness. From seed science to bioactive
+                            precision, <span className="font-extrabold">iXAN </span>
+                            represents the mission of creating plant-based solutions with
+                            measurable impact.
+                        </p>
+                        <a
+                            href="#newrelease"
+                            className="mt-6 inline-flex items-center gap-2 font-semibold text-lg sm:text-xl text-[#003B1B] hover:text-green-500 transition-colors"
+                        >
+                            Know more
+                            <GoArrowRight className="text-2xl font-bold" />
+                        </a>
+                    </div>
+                    <div className="md:col-span-2 relative z-20">
+                        <div
+                            className="bg-white rounded-xl shadow-xl sm:p-8 border border-[#FF9100]
+               w-[500px]  /* fixed width for desktop */
+               md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:translate-x-1/6"
+                        >
+                            <div className="flex justify-center mb-4">
+                                <img
+                                    src={ixanImg}
+                                    alt="iXAN product"
+                                    className="w-[312px] h-[116px] object-contain"
+                                />
+                            </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
-
-                        <div className="md:col-span-3">
-                            <p className=" text-[#FFFFFF] font-figtree font-semibold not-italic text-[16px] leading-[16px] tracking-[0.03em] uppercase">
-                                New Release
+                            <p className="text-center text-sm sm:text-base leading-relaxed text-[#181818] px-6">
+                                Patented Synergistic Anti-Oxidant & Anti-Inflammatory Composition
                             </p>
-                            <h1 className="mt-3 text[#181818]  text-[48px] leading-[56px] tracking-[-0.01em] font-normal">
-                                A promising nature
-                                <br className="hidden sm:block" />
-                                centric solution!
-                            </h1>
-                            <p className="mt-4 text[#181818] font-normal not-italic text-[20px] leading-[28px] tracking-[0em] pr-12">
-                                Powered by our patented blend of Curcuminoids +
-                                Xanthophylls, <span className="font-extrabold">iXAN </span>is a clinically validated innovation
-                                for vision, cognition, liver wellness, skin health & overall wellness.
-                                From seed science to bioactive precision,<span className="font-extrabold">iXAN </span> represents the mission
-                                of creating plant‑based solutions with measurable impact.
-                            </p>
-
-                            <a
-                                href="#learn-more"
-                                className="mt-6 inline-flex items-center gap-2 font-semibold not-italic text-[20px] leading-[20px] tracking-[2%] lowercase text-[#003B1B]"
-                            >
-                                know more
-                                <img src={arrow} alt="arrow" className="w-[16px] h-[16px] mt-2 " />
-                            </a>
-                        </div>
-
-                        <div className="md:col-span-2">
-                            <div className="md:-mr-8 md:translate-x-4 md:-translate-y-2">
-                                <div className="bg-white text-gray-900 rounded-xl shadow-sm ring-1 ring-black/10 p-5 sm:p-6">
-
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-full bg-amber-400 grid place-items-center text-white font-bold">
-                                            i
-                                        </div>
-                                        <div>
-                                            <div className="font-extrabold tracking-tight text-lg">
-                                                iXAN
-                                                <sup className="align-super text-[10px]">TM</sup>
-                                            </div>
-                                            <div className="text-[11px] -mt-0.5 text-gray-600">
-                                                Curcuminoids+ XANthophylls
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <p className="mt-3 text-[11px] text-gray-600">
-                                        Patented Synergistic Anti‑Oxidant & Anti‑Inflammatory Composition
-                                    </p>
-
-                                    <hr className="my-3 border-gray-200" />
-
-                                    <ul className="text-[11px] text-gray-800 space-y-1">
-                                        <li>Sharper vision</li>
-                                        <li>Enhanced cognitive function</li>
-                                        <li>Healthier liver</li>
-                                        <li>Radiant skin</li>
-                                    </ul>
-                                </div>
+                            <div className="flex flex-wrap items-center justify-center gap-2 text-[#181818] font-semibold text-xs sm:text-sm uppercase mt-4">
+                                <span>Sharper vision</span>
+                                <div className="w-1 h-1 bg-[#181818] rounded-full" />
+                                <span>Enhanced cognitive function</span>
+                                <div className="w-1 h-1 bg-[#181818] rounded-full" />
+                                <span>Healthier liver</span>
+                                <div className="w-1 h-1 bg-[#181818] rounded-full" />
+                                <span>Radiant skin</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className="pointer-events-none absolute top-0 right-0 w-8 h-8 bg-white rounded-bl-2xl md:hidden" />
-                    <div className="pointer-events-none absolute bottom-0 left-0 w-8 h-8 bg-white rounded-tr-2xl md:hidden" />
                 </div>
             </div>
         </section>
-
     );
 };
 

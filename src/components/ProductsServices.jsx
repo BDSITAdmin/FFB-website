@@ -7,7 +7,7 @@ import healthIcon from '../assets/health.png';
 
 const services = [
     {
-        icon: seedIcon, // Your seed/farming icon
+        icon: seedIcon,
         title: "Seed Innovation & Sustainable Farming",
         features: [
             "Precision phenotyping",
@@ -16,26 +16,29 @@ const services = [
         ]
     },
     {
-        icon: bioIcon, // Your molecule/bioactives icon
+        icon: bioIcon,
         title: "Functional Bioactives",
         features: [
-            "Botanicals",
-            "Dietary supplements",
-            "Nutraceuticals"
+            " Fortified food",
+            "Beverages",
+            "Dietary supplements"
+
+
+
         ]
     },
     {
-        icon: researchIcon, // Your research/lab icon
+        icon: researchIcon,
         title: "Advanced Contract Research",
         features: [
             "Formulation",
             "Preclinical Studies",
             "Clinical trial management",
-            "Regulatory support"
+            "Regulatory filings"
         ]
     },
     {
-        icon: healthIcon, // Your health/supplements icon
+        icon: healthIcon,
         title: "Health Supplements",
         features: [
             "Eye health",
@@ -57,14 +60,14 @@ export default function ProductsServices() {
         <section className="w-full bg-white py-16">
             <div className="mx-auto max-w-7xl px-6">
 
-                {/* Header */}
+
                 <div className="mb-12">
                     <h2 className="text-[48px] leading-[52px] tracking-[-0.01em] mb-8 text-[#003B1B]">
                         Products & Services
                     </h2>
                 </div>
 
-                {/* Services Grid */}
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                     {services.map((service, index) => (
                         <div
@@ -75,7 +78,7 @@ export default function ProductsServices() {
                 transition-shadow duration-300
                 hover:border hover:border-[#003B1B]"
                         >
-                            {/* PNG Icon */}
+
                             <div className="w-12 h-12  rounded-xl flex items-center justify-center">
                                 <img
                                     src={service.icon}
@@ -85,12 +88,12 @@ export default function ProductsServices() {
                                 />
                             </div>
 
-                            {/* Title */}
-                            <h3 className="font-[DM_Serif_Display] font-normal not-italic text-[32px] leading-[42px] tracking-[-0.01em]  text-[#003B1B]">
+
+                            <h3 className="font-[DM_Serif_Display] font-normal not-italic text-[32px] leading-[42px] tracking-[-0.01em]  text-[#003B1B] py-4">
                                 {service.title}
                             </h3>
 
-                            {/* Features List */}
+
                             <ul className="space-y-2 mt-2">
                                 {service.features.map((feature, featureIndex) => (
                                     <li
@@ -106,9 +109,9 @@ export default function ProductsServices() {
                     ))}
                 </div>
 
-                {/* View All Button */}
+
                 <div className="flex justify-center">
-                    <button className="bg-[#00622D] text-white w-[317px] h-[48px] px-6 py-[14px] gap-[10px] rounded-full font-[Figtree] font-semibold not-italic text-[20px] leading-[20px] tracking-[0.02em]">
+                    <button className="bg-[#00622D] text-white w-[317px] h-[48px] px-6 py-[14px] gap-[10px] rounded-full  text-[20px] leading-[20px] tracking-[0.02em] hover:bg-green-950 flex items-center justify-center font-[Figtree] font-semibold not-italic transition-colors">
                         View all Products & Services
                     </button>
                 </div>

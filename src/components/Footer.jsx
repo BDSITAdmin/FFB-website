@@ -46,9 +46,9 @@ const Footer = () => {
                     </div>
 
 
-                    <div className="w-full lg:w-2/3 text-sm flex flex-col gap-4 mt-24">
+                    <div className="w-full lg:w-2/3 text-sm flex flex-col gap-4 lg:mt-24">
 
-                        <div className="flex flex-wrap items-center gap-4  pb-3 font-[Figtree] font-medium not-italic text-[14px] leading-[20px] tracking-[0.02em] text-[#C6FCCE]">
+                        <div className="flex flex-wrap items-center gap-4  pb-3 font-[Figtree] font-medium not-italic lg:text-[14px] leading-[20px] tracking-[0.02em] text-[#C6FCCE]">
                             <span className="whitespace-nowrap">Seed Production, Testing & Trait Optimization</span>
 
                             <div className="hidden sm:block h-6 border-1 border-[#C6FCCE]"></div>
@@ -60,7 +60,7 @@ const Footer = () => {
                             <div className="hidden sm:block h-6 border-1 border-[#C6FCCE]"></div>
                             <span className="whitespace-nowrap">Contract Research</span>
                         </div>
-                        <div className="flex flex-wrap items-center gap-6 mt-2  font-[Figtree] font-medium not-italic text-[20px] leading-[20px] tracking-[0.02em] text-[#C6FCCE] ">
+                        <div className="flex flex-wrap items-center gap-6 mt-2  font-[Figtree] font-medium not-italic lg:text-[20px] leading-[20px] tracking-[0.02em] text-[#C6FCCE] ">
                             <div className="hidden sm:block h-6 "></div>
                             <span className="whitespace-nowrap">About Us</span>
 

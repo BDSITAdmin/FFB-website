@@ -16,11 +16,11 @@ const Navbar = () => {
 
 
           <a href="/" className="flex items-center">
-            <img src={Logo} alt="FF Bioworks" className="w-[168px] h-[41px]" />
+            <img src={Logo} alt="FF Bioworks" className="w-[140px] h-[36px] sm:w-[150px] sm:h-[38px] md:w-[120px] md:h-[25px] lg:w-[180px] lg:h-[45px] xl:w-[200px] xl:h-[50px] " />
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="hover:text-green-300 font-medium text-[18px] transition duration-200">
+            <a href="#about" className="hover:text-green-300 font-medium text-[18px] transition duration-200   sm:text-[8px] md:text-[10px] lg:text-[16px] xl:text-[16px]">
               About Us
             </a>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <button className="flex items-center space-x-1 hover:text-green-300 font-medium text-[18px] transition duration-200">
+              <button className="flex items-center space-x-1 hover:text-green-300 font-medium text-[18px] transition duration-200 sm:text-[8px] md:text-[10px] lg:text-[16px] xl:text-[16px]">
                 Business Verticals <FaChevronDown className="w-4 h-4 mt-1 text-2xl ml-2 " />
               </button>
 
@@ -53,20 +53,20 @@ const Navbar = () => {
             </div>
 
 
-            <Link to="/products" className="hover:text-green-300 font-medium text-[18px] transition duration-200">
+            <Link to="/products" className="hover:text-green-300 font-medium text-[18px] transition duration-200 sm:text-[8px] md:text-[10px] lg:text-[16px] xl:text-[16px]">
               Products & Services
             </Link>
-            <Link to="/innovation" className="hover:text-green-300 font-medium text-[18px] transition duration-200">
+            <Link to="/innovation" className="hover:text-green-300 font-medium text-[18px] transition duration-200 sm:text-[8px] md:text-[10px] lg:text-[16px] xl:text-[16px]">
               Innovation & Impact
             </Link>
-            <Link to="/resources" className="hover:text-green-300 font-medium text-[18px] transition duration-200">
+            <Link to="/resources" className="hover:text-green-300 font-medium text-[18px] transition duration-200 sm:text-[8px] md:text-[10px] lg:text-[16px] xl:text-[16px]">
               Resources
             </Link>
 
 
             <Link
               to="/contact"
-              className="border-2 border-white px-6 py-2 rounded-full hover:bg-white hover:text-green-900 transition duration-200 font-medium text-[18px]"
+              className="border-2 border-white px-6 py-2 rounded-full hover:bg-white hover:text-green-900 transition duration-200 font-medium text-[18px] sm:text-[8px] md:text-[10px] lg:text-[16px] xl:text-[16px] sm:px-2 sm:py-2 md:px-4 md:py-2 lg:px-6 lg:py-4 xl:px-6 xl:py-2"
             >
               Contact Us
             </Link>
@@ -153,7 +153,7 @@ const Navbar = () => {
             <div className="pt-2">
               <Link
                 to="/contact"
-                className="block text-center border-2 border-white px-6 py-3 rounded-full hover:bg-white hover:text-green-900 transition duration-200 font-medium"
+                className="block text-center border-2 border-white px-4 py-4 rounded-full hover:bg-white hover:text-green-900 transition duration-200 font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 Contact Us

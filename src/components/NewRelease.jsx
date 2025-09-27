@@ -4,16 +4,16 @@ import ixanImg from "../assets/ixanLogo.png";
 
 const NewReleaseCard = () => {
     return (
-        <section className="relative overflow-hidden py-12 mt-16  ">
+        <section className="relative py-2 mt-16 overflow-hidden ">
 
             <div
                 className="absolute left-0 top-0 bottom-0 bg-[#FF9100] rounded-tr-[24px] rounded-br-[24px]
                    w-[90vw] md:w-[90vw] lg:w-[75%]"
                 aria-hidden="true"
             />
-            <div className="relative max-w-7xl mx-auto ">
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center py-8">
-                    <div className="md:col-span-3 z-20 md:p-16 px-6 sm:px-6 lg:px-8">
+            <div className="relative mx-auto max-w-7xl ">
+                <div className="grid items-center grid-cols-1 gap-8 py-4 md:grid-cols-5">
+                    <div className="z-20 px-2 md:col-span-3 md:p-6 sm:px-2 lg:px-4">
                         <p className="text-[#C6FCCE] font-figtree font-semibold text-[16px] tracking-wide uppercase">
                             New Release
                         </p>
@@ -47,11 +47,11 @@ const NewReleaseCard = () => {
                             <GoArrowRight className="text-2xl font-bold" />
                         </a>
                     </div>
-                    <div className="md:col-span-2 relative z-20 md:block hidden">
+                    <div className="relative z-20 hidden md:col-span-2 md:block">
                         <div
-                            className="bg-white rounded-xl shadow-xl sm:p-8 border border-[#FF9100]
-           w-[500px] min-h-[430px]  
-           md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:translate-x-1/6
+                            className="bg-white rounded-xl shadow-xl sm:p-2 border border-[#FF9100]
+           w-[500px] min-h-[350px]  
+           md:absolute md:right-30 md:top-1/2 md:-translate-y-1/2 md:translate-x-1/6
            flex flex-col justify-center"
                         >
                             <div className="flex justify-center mb-6">

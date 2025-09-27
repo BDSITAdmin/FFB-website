@@ -51,7 +51,7 @@ const NewReleaseCard = () => {
                         <div
                             className="bg-white rounded-xl shadow-xl sm:p-8 border border-[#FF9100]
            w-[500px] min-h-[430px]  
-           md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 md:translate-x-1/6
+           md:absolute md:right-20 md:top-1/2 md:-translate-y-1/2 md:translate-x-1/6
            flex flex-col justify-center"
                         >
                             <div className="flex justify-center mb-6">

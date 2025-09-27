@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.code-workspace
+*.sublime-project
+*.sublime-workspace 
+*.tmproject
+*.komodoproject
+*.esproj
+*.dist

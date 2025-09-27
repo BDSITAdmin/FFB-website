@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#003B1B] text-white sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl lg:mx-auto  text-center md:px-4  px-6">
         <div className="flex justify-between items-center h-28">
 
 
@@ -19,7 +19,7 @@ const Navbar = () => {
             <img src={Logo} alt="FF Bioworks" className="w-[140px] h-[36px] sm:w-[150px] sm:h-[38px] md:w-[120px] md:h-[25px] lg:w-[180px] lg:h-[45px] xl:w-[200px] xl:h-[50px] " />
           </a>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-4 xl:space-x-10">
             <a href="#about" className="hover:text-green-300 font-medium text-[18px] transition duration-200   sm:text-[8px] md:text-[10px] lg:text-[16px] xl:text-[16px]">
               About Us
             </a>
@@ -66,7 +66,7 @@ const Navbar = () => {
 
             <Link
               to="/contact"
-              className="border-2 border-white px-6 py-2 rounded-full hover:bg-white hover:text-green-900 transition duration-200 font-medium text-[18px] sm:text-[8px] md:text-[10px] lg:text-[16px] xl:text-[16px] sm:px-2 sm:py-2 md:px-4 md:py-2 lg:px-6 lg:py-4 xl:px-6 xl:py-2"
+              className="border-2 border-white px-6 py-2 rounded-full hover:bg-white hover:text-green-900 transition duration-200 font-medium  sm:text-[8px] md:text-[10px] lg:text-[14px] xl:text-[16px] sm:px-2 sm:py-2 md:px-4 md:py-1 lg:px-6 lg:py-2 xl:px-6 xl:py-2"
             >
               Contact Us
             </Link>
